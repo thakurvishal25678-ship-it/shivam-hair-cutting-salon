@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Shivam Hair Cutting Salon - Premium Men's Grooming</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #f8f9fa;
+    color: #2c3e50;
+    line-height: 1.6;
+}
+
+/* Animations */
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 10px 30px rgba(0,0,0,.1);
+    }
+    50% {
+        box-shadow: 0 10px 40px rgba(212, 175, 55, 0.3);
+    }
+}
+
+@keyframes rotateIn {
+    from {
+        opacity: 0;
+        transform: rotate(-10deg) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: rotate(0) scale(1);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Navigation */
+nav {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    padding: 12px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    animation: slideInDown 0.7s ease-out;
+    box-shadow: 0 4px 15px rgba(0,0,0,.2);
+    backdrop-filter: blur(10px);
+}
+
+nav .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 80px;
+    height: auto;
+    border-radius: 8px;
+    animation: rotateIn 0.8s ease-out;
+    transition: all 0.3s;
+    filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.3));
+    object-fit: contain;
+}
+
+.logo:hover {
+    transform: scale(1.1) rotate(5deg);
+    filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.6));
+}
+
+nav a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    display: inline-block;
+    animation: slideInUp 0.6s ease-out;
+    transition: all 0.3s;
+    position: relative;
+    padding: 8px 0;
+    letter-spacing: 0.5px;
+}
+
+nav a:nth-of-type(1) { animation-delay: 0.1s; }
+nav a:nth-of-type(2) { animation-delay: 0.15s; }
+nav a:nth-of-type(3) { animation-delay: 0.2s; }
+nav a:nth-of-type(4) { animation-delay: 0.25s; }
+nav a:nth-of-type(5) { animation-delay: 0.3s; }
+nav a:nth-of-type(6) { animation-delay: 0.35s; }
+
+nav a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #d4af37, #ffd700);
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+nav a:hover {
+    color: #ffd700;
+}
+
+nav a:hover::before {
+    width: 100%;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 50%, #2c3e50 100%);
+    color: white;
+    text-align: center;
+    padding: 120px 20px 100px;
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at 30% 60%, rgba(212, 175, 55, 0.15) 0%, transparent 50%);
+    animation: float 8s ease-in-out infinite;
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #d4af37, transparent);
+}
+
+header h1 {
+    font-size: 50px;
+    color: #ffd700;
+    animation: slideInDown 0.8s ease-out;
+    position: relative;
+    z-index: 1;
+    text-shadow: 2px 2px 8px rgba(0,0,0,.5);
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 22px;
+    margin-top: 15px;
+    animation: slideInUp 0.8s ease-out 0.2s both;
+    position: relative;
+    z-index: 1;
+    font-weight: 300;
+    color: #e0e0e0;
+    letter-spacing: 0.5px;
+}
+
+.header-subtitle {
+    font-size: 14px;
+    color: #d4af37;
+    animation: fadeIn 1s ease-out 0.5s both;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.btn-group {
+    animation: slideInUp 0.8s ease-out 0.4s both;
+    position: relative;
+    z-index: 1;
+    margin-top: 30px;
+}
+
+.btn {
+    display: inline-block;
+    margin: 10px 8px;
+    padding: 15px 35px;
+    background: linear-gradient(135deg, #ffd700, #d4af37);
+    color: #000;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
+    font-size: 15px;
+    letter-spacing: 0.5px;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.4);
+    transition: left 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(212, 175, 55, 0.5);
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+.btn:active {
+    transform: translateY(-2px) scale(1.02);
+}
+
+/* Sections */
+section {
+    padding: 80px 20px;
+    max-width: 1100px;
+    margin: auto;
+    animation: fadeIn 0.8s ease-out;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    color: #1a1a1a;
+    font-size: 36px;
+    animation: slideInDown 0.6s ease-out;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #d4af37, #ffd700, #d4af37);
+    margin: 15px auto 0;
+    animation: slideInRight 0.6s ease-out 0.2s both;
+    border-radius: 2px;
+}
+
+section p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #4a4a4a;
+}
+
+#about p {
+    animation: slideInUp 0.8s ease-out 0.2s both;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#about b {
+    color: #d4af37;
+    font-weight: 700;
+}
+
+/* Services */
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    padding: 35px 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    text-align: center;
+    animation: scaleIn 0.6s ease-out;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border-top: 4px solid #d4af37;
+}
+
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.15s; }
+.card:nth-child(3) { animation-delay: 0.2s; }
+.card:nth-child(4) { animation-delay: 0.25s; }
+.card:nth-child(5) { animation-delay: 0.3s; }
+.card:nth-child(6) { animation-delay: 0.35s; }
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), transparent);
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+
+.card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #d4af37, #ffd700);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover {
+    transform: translateY(-15px) scale(1.05);
+    box-shadow: 0 20px 50px rgba(212, 175, 55, 0.25);
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+.card:hover::after {
+    transform: scaleX(1);
+}
+
+.card h3 {
+    margin-bottom: 12px;
+    color: #1a1a1a;
+    font-size: 26px;
+    font-weight: 700;
+    position: relative;
+    z-index: 1;
+}
+
+.card p {
+    position: relative;
+    z-index: 1;
+    color: #6c757d;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/* Gallery Section */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.gallery-card {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,.1);
+    animation: scaleIn 0.6s ease-out;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    height: 300px;
+}
+
+.gallery-card:nth-child(1) { animation-delay: 0.1s; }
+.gallery-card:nth-child(2) { animation-delay: 0.15s; }
+.gallery-card:nth-child(3) { animation-delay: 0.2s; }
+.gallery-card:nth-child(4) { animation-delay: 0.25s; }
+
+.gallery-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gallery-card:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.8), rgba(0, 0, 0, 0.5));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gallery-card:hover .gallery-overlay {
+    opacity: 1;
+}
+
+.gallery-title {
+    color: white;
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center;
+}
+
+/* Owner Section */
+.owner-section {
+    background: white;
+    padding: 50px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    margin-top: 50px;
+    animation: slideInUp 0.8s ease-out;
+}
+
+.owner-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.owner-photo {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.2);
+    animation: slideInLeft 0.8s ease-out 0.2s both;
+}
+
+.owner-photo img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    transition: transform 0.4s;
+}
+
+.owner-photo:hover img {
+    transform: scale(1.05);
+}
+
+.owner-content {
+    animation: slideInRight 0.8s ease-out 0.2s both;
+}
+
+.owner-content h3 {
+    font-size: 32px;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.owner-content .title {
+    color: #d4af37;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.owner-content p {
+    color: #4a4a4a;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+/* Price List */
+.price {
+    background: white;
+    max-width: 650px;
+    margin: auto;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 15px 40px rgba(0,0,0,.08);
+    animation: slideInUp 0.8s ease-out;
+    border: 2px solid #f0f0f0;
+}
+
+.price p {
+    padding: 18px 0;
+    border-bottom: 1px solid #e8e8e8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: slideInLeft 0.6s ease-out;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+.price p:nth-child(1) { animation-delay: 0.1s; }
+.price p:nth-child(2) { animation-delay: 0.15s; }
+.price p:nth-child(3) { animation-delay: 0.2s; }
+.price p:nth-child(4) { animation-delay: 0.25s; }
+.price p:nth-child(5) { animation-delay: 0.3s; }
+.price p:nth-child(6) { animation-delay: 0.35s; }
+
+.price p:hover {
+    background: linear-gradient(90deg, rgba(212, 175, 55, 0.05), transparent);
+    padding-left: 10px;
+    transform: translateX(5px);
+}
+
+.price p b {
+    color: #d4af37;
+    font-weight: 700;
+    font-size: 18px;
+    transition: all 0.3s;
+}
+
+.price p:hover b {
+    color: #ffd700;
+    animation: pulse 0.6s ease-out;
+}
+
+/* Contact */
+.contact {
+    text-align: center;
+}
+
+.contact p {
+    margin: 20px 0;
+    font-size: 17px;
+    animation: slideInUp 0.6s ease-out;
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+.contact p:nth-child(1) { animation-delay: 0.1s; }
+.contact p:nth-child(2) { animation-delay: 0.15s; }
+.contact p:nth-child(3) { animation-delay: 0.2s; }
+
+.contact b {
+    color: #d4af37;
+    font-weight: 700;
+}
+
+.contact .btn-group {
+    margin-top: 35px;
+}
+
+.contact a {
+    animation: slideInUp 0.8s ease-out;
+}
+
+.contact a:nth-of-type(1) { animation-delay: 0.3s; }
+.contact a:nth-of-type(2) { animation-delay: 0.4s; }
+
+/* Highlight Box */
+.highlight-box {
+    background: linear-gradient(135deg, #ffd700, #d4af37);
+    color: #000;
+    padding: 25px;
+    border-radius: 12px;
+    margin: 40px auto;
+    max-width: 600px;
+    animation: slideInUp 0.8s ease-out 0.3s both;
+    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.3);
+    font-weight: 700;
+    font-size: 18px;
+}
+
+/* Stats Section */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 30px;
+    margin: 50px 0;
+    text-align: center;
+}
+
+.stat-item {
+    animation: scaleIn 0.6s ease-out;
+}
+
+.stat-item:nth-child(1) { animation-delay: 0.1s; }
+.stat-item:nth-child(2) { animation-delay: 0.2s; }
+.stat-item:nth-child(3) { animation-delay: 0.3s; }
+
+.stat-number {
+    font-size: 36px;
+    font-weight: 700;
+    color: #d4af37;
+    margin-bottom: 10px;
+}
+
+.stat-label {
+    color: #6c757d;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    color: #e0e0e0;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 50px;
+    animation: slideInUp 0.6s ease-out;
+    font-weight: 500;
+    border-top: 2px solid #d4af37;
+}
+
+footer p {
+    color: #d4af37;
+    margin-bottom: 10px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 36px;
+    }
+
+    header p {
+        font-size: 18px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    .services {
+        grid-template-columns: 1fr;
+    }
+
+    .owner-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .gallery-container {
+        grid-template-columns: 1fr;
+    }
+
+    nav .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .btn {
+        padding: 12px 25px;
+        font-size: 14px;
+        width: 90%;
+    }
+
+    section {
+        padding: 50px 15px;
+    }
+
+    .card {
+        padding: 25px 20px;
+    }
+
+    .owner-section {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 80px 15px 60px;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .logo {
+        width: 60px;
+    }
+
+    h2 {
+        font-size: 24px;
+        margin-bottom: 35px;
+    }
+
+    .contact p {
+        font-size: 15px;
+    }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #d4af37;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ffd700;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav>
+    <div class="container">
+        <img src="c:\Users\HP\Desktop\logo.png.jpeg" alt="Shivam Hair Cutting Salon Logo" class="logo">
+
+        <div class="nav-links">
+            <a href="#home">HOME</a>
+            <a href="#about">ABOUT</a>
+            <a href="#services">SERVICES</a>
+            <a href="#gallery">GALLERY</a>
+            <a href="#price">PRICING</a>
+            <a href="#contact">CONTACT</a>
+        </div>
+    </div>
+</nav>
+
+
+<!-- Home -->
+<header id="home">
+    <div class="header-subtitle">✨ PREMIUM GROOMING EXPERIENCE ✨</div>
+    <h1>Shivam Hair Cutting Salon</h1>
+    <p>Where Style Meets Excellence</p>
+
+    <div class="btn-group">
+        <a href="tel:+919304869265" class="btn">
+            📞 CALL NOW
+        </a>
+
+        <a href="https://wa.me/919304869265" class="btn">
+            💬 WHATSAPP BOOKING
+        </a>
+    </div>
+</header>
+
+
+<!-- About -->
+<section id="about">
+    <h2>About Us</h2>
+
+    <p>
+        Welcome to <b>Shivam Hair Cutting Salon</b> – your destination for premium men's grooming and styling.
+        With over a decade of expertise, we deliver stylish haircuts, professional beard styling, premium hair treatments, 
+        and complete grooming solutions. Our mission is simple: <b>transform your look, boost your confidence</b>.
+    </p>
+
+    <div class="stats">
+        <div class="stat-item">
+            <div class="stat-number">500+</div>
+            <div class="stat-label">Happy Clients</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">15+</div>
+            <div class="stat-label">Years Experience</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Satisfaction</div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Services -->
+<section id="services">
+    <h2>Our Services</h2>
+
+    <div class="services">
+
+        <div class="card">
+            <h3>✂️ Premium Haircuts</h3>
+            <p>Latest styles with expert precision</p>
+        </div>
+
+        <div class="card">
+            <h3>🧔 Beard Design</h3>
+            <p>Professional beard grooming & styling</p>
+        </div>
+
+        <div class="card">
+            <h3>💈 Classic Shaving</h3>
+            <p>Smooth & comfortable shave experience</p>
+        </div>
+
+        <div class="card">
+            <h3>🧴 Hair Spa & Therapy</h3>
+            <p>Nourishing treatments for healthy hair</p>
+        </div>
+
+        <div class="card">
+            <h3>🎨 Hair Coloring</h3>
+            <p>Premium color treatments & touch-ups</p>
+        </div>
+
+        <div class="card">
+            <h3>😊 Facial & Skincare</h3>
+            <p>Complete facial grooming solutions</p>
+        </div>
+
+    </div>
+
+    <div class="highlight-box">
+        ⭐ All Services Use Premium Products & Sterilized Equipment
+    </div>
+</section>
+
+
+<!-- Gallery & Owner Section -->
+<section id="gallery">
+    <h2>Salon & Owner</h2>
+
+    <!-- Gallery -->
+    <div class="gallery-container">
+        <div class="gallery-card">
+            <img src="c:\Users\HP\Pictures\interior.salon.jpeg" alt="Salon Interior">
+            <div class="gallery-overlay">
+                <div class="gallery-title">Professional Setup</div>
+            </div>
+        </div>
+
+        <div class="gallery-card">
+            <img src="c:\Users\HP\Desktop\WhatsApp Image 2026-07-28 at 1.03.48 AM.jpeg" alt="Salon Ambiance">
+            <div class="gallery-overlay">
+                <div class="gallery-title">Modern Ambiance</div>
+            </div>
+        </div>
+
+        <div class="gallery-card">
+            <img src="c:\Users\HP\Desktop\Salon.Equipment.jpg" alt="Salon Equipment">
+            <div class="gallery-overlay">
+                <div class="gallery-title">Premium Equipment</div>
+            </div>
+        </div>
+
+        <div class="gallery-card">
+            <img src="c:\Users\HP\Desktop\salon.image.jpg" alt="Salon Views">
+            <div class="gallery-overlay">
+                <div class="gallery-title">Welcoming Space</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Owner Section -->
+    <div class="owner-section">
+        <div class="owner-container">
+            <div class="owner-photo">
+                <img src="c:\Users\HP\Desktop\shivan.owner.jpeg" alt="Owner - Shivam">
+            </div>
+
+            <div class="owner-content">
+                <h3>Meet Shivam</h3>
+                <div class="title">Owner & Master Barber</div>
+                <p>
+                    With over 15 years of professional experience in men's grooming, Shivam is passionate about delivering excellence. 
+                    His expertise in contemporary hairstyles, beard design, and personal grooming makes him a trusted name in the industry.
+                </p>
+                <p>
+                    🏆 Certified Professional Barber
+                </p>
+                <p>
+                    💼 Trained from international grooming institutes
+                </p>
+                <p>
+                    ✂️ Specialization in trendy cuts & beard styling
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Price -->
+<section id="price">
+    <h2>Pricing</h2>
+
+    <div class="price">
+
+        <p>
+            <span>Premium Haircut</span>
+            <b>₹100</b>
+        </p>
+
+        <p>
+            <span>Beard Styling & Design</span>
+            <b>₹50</b>
+        </p>
+
+        <p>
+            <span>Professional Shaving</span>
+            <b>₹50</b>
+        </p>
+
+        <p>
+            <span>Hair Spa Treatment</span>
+            <b>₹300</b>
+        </p>
+
+        <p>
+            <span>Hair Coloring Service</span>
+            <b>₹300</b>
+        </p>
+
+        <p>
+            <span>Facial & Skincare</span>
+            <b>₹250</b>
+        </p>
+
+    </div>
+
+    <div class="highlight-box" style="margin-top: 40px;">
+        💰 Get 15% Off on First Booking!
+    </div>
+</section>
+
+
+<!-- Contact -->
+<section id="contact">
+    <h2>Get In Touch</h2>
+
+    <div class="contact">
+
+        <p>📞 <b>Call Us:</b> +91 9304869265</p>
+
+        <p>📍 <b>Location:</b> Manipur, India</p>
+
+        <p>🕘 <b>Business Hours:</b> 9:00 AM – 9:00 PM (Daily)</p>
+
+        <div class="btn-group">
+            <a href="tel:+919304869265" class="btn">
+                📞 CALL NOW
+            </a>
+
+            <a href="https://wa.me/919304869265" class="btn">
+                💬 BOOK APPOINTMENT
+            </a>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Footer -->
+<footer>
+    <p>🌟 Premium Grooming • Professional Service • Customer Satisfaction</p>
+    © 2026 Shivam Hair Cutting Salon | All Rights Reserved
+</footer>
+
+</body>
+</html>
