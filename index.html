@@ -835,7 +835,9 @@ footer p {
             <a href="#about">ABOUT</a>
             <a href="#services">SERVICES</a>
             <a href="#gallery">GALLERY</a>
-            <a href="#price">PRICING</a>
+            <a href="#price">PRICE</a>
+            <a href="#APPOINTMENT">BOOK APPOINIMENT</a>
+            <a href="#PAYMENT">PAYMENT</a>
             <a href="#contact">CONTACT</a>
         </div>
     </div>
@@ -977,7 +979,7 @@ footer p {
                 <h3>Meet Shivam</h3>
                 <div class="title">Owner & Master Barber</div>
                 <p>
-                    With over 15 years of professional experience in men's grooming, Shivam is passionate about delivering excellence. 
+                    With over 20 years of professional experience in men's grooming, Shivam is passionate about delivering excellence. 
                     His expertise in contemporary hairstyles, beard design, and personal grooming makes him a trusted name in the industry.
                 </p>
                 <p>
@@ -997,23 +999,23 @@ footer p {
 
 <!-- Price -->
 <section id="price">
-    <h2>Pricing</h2>
+    <h2>Price</h2>
 
     <div class="price">
 
         <p>
             <span>Premium Haircut</span>
-            <b>₹100</b>
+            <b>₹200</b>
         </p>
 
         <p>
             <span>Beard Styling & Design</span>
-            <b>₹50</b>
+            <b>₹100</b>
         </p>
 
         <p>
             <span>Professional Shaving</span>
-            <b>₹50</b>
+            <b>₹80</b>
         </p>
 
         <p>
@@ -1028,7 +1030,7 @@ footer p {
 
         <p>
             <span>Facial & Skincare</span>
-            <b>₹250</b>
+            <b>₹500</b>
         </p>
 
     </div>
@@ -1039,6 +1041,95 @@ footer p {
 </section>
 
 
+<!-- Online Appointment Booking -->
+<section id="appointment">
+    <h2>Book Your Appointment</h2>
+
+    <div class="price">
+        <form id="appointmentForm">
+
+            <p>
+                <label for="name">Full Name</label>
+                <input type="text" id="name" placeholder="Enter your name" required>
+            </p>
+
+            <p>
+                <label for="phone">Mobile Number</label>
+                <input type="tel" id="phone" placeholder="Enter mobile number" required>
+            </p>
+
+            <p>
+                <label for="service">Select Service</label>
+                <select id="service" required>
+                    <option value="">Choose a service</option>
+                    <option>Premium Haircut</option>
+                    <option>Beard Design</option>
+                    <option>Classic Shaving</option>
+                    <option>Hair Spa & Therapy</option>
+                    <option>Hair Coloring</option>
+                    <option>Facial & Skincare</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="date">Select Date</label>
+                <input type="date" id="date" required>
+            </p>
+
+            <p>
+                <label for="time">Select Time</label>
+                <input type="time" id="time" required>
+            </p>
+
+            <button type="submit" class="btn">
+                📅 BOOK APPOINTMENT
+            </button>
+
+        </form>
+    </div>
+</section>
+
+<script>
+document.getElementById("appointmentForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const phone = document.getElementById("phone").value;
+    const service = document.getElementById("service").value;
+    const date = document.getElementById("date").value;
+    const time = document.getElementById("time").value;
+
+    const message =
+        "Hello Shivam Hair Cutting Salon,%0A%0A" +
+        "I want to book an appointment.%0A%0A" +
+        "Name: " + name + "%0A" +
+        "Mobile: " + phone + "%0A" +
+        "Service: " + service + "%0A" +
+        "Date: " + date + "%0A" +
+        "Time: " + time;
+
+    window.open(
+        "https://wa.me/919304869265?text=" + message,
+        "_blank"
+    );
+});
+</script>
+<!-- Payment Section -->
+<section id="payment">
+    <h2>Make a Payment</h2>
+
+    <div class="price">
+        <p>
+            <span>UPI ID</span>
+            <b>shivam24465@axl</b>
+        </p>
+
+        <a href="upi://pay?pa=shivam24465@axl&pn=Shivam%20Hair%20Cutting%20Salon"
+           class="btn">
+            💳 PAY NOW
+        </a>
+    </div>
+</section>
 <!-- Contact -->
 <section id="contact">
     <h2>Get In Touch</h2>
@@ -1049,7 +1140,7 @@ footer p {
 
         <p>📍 <b>Location:</b> Manipur, India</p>
 
-        <p>🕘 <b>Business Hours:</b> 9:00 AM – 9:00 PM (Daily)</p>
+        <p>🕘 <b>Business Hours:</b> 8:00 AM – 10:00 PM (Daily)</p>
 
         <div class="btn-group">
             <a href="tel:+919304869265" class="btn">
@@ -1063,8 +1154,17 @@ footer p {
 
     </div>
 </section>
+<div class="btn-group">
+    <a href="tel:+919304869265" class="btn">📞 CALL NOW</a>
 
-
+    <a href="https://wa.me/919304869265" class="btn">💬 WHATSAPP</a>
+</div>
+<a href="https://www.instagram.com/shivam_thakur_2042?igsh=MWVpb3Jza3BsNmVnaA=="
+   target="_blank"
+   rel="noopener noreferrer"
+   class="btn">
+    📸 FOLLOW US ON INSTAGRAM
+</a>
 <!-- Footer -->
 <footer>
     <p>🌟 Premium Grooming • Professional Service • Customer Satisfaction</p>
